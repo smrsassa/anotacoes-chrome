@@ -1,0 +1,23 @@
+{
+  "name": "anotacoes-chrome",
+  "version": "1.0.0",
+  "description": "Uma extensão do chrome para fazer pequenas anotações",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smrsassa/anotacoes-chrome.git"
+  },
+  "keywords": [
+    "Anotações",
+    "Chrome extension"
+  ],
+  "author": "Samuel Mayer Rufino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smrsassa/anotacoes-chrome/issues"
+  },
+  "homepage": "https://github.com/smrsassa/anotacoes-chrome#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "jquery": "^3.6.0"
+  }
+}
