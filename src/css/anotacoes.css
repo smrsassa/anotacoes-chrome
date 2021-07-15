@@ -1,0 +1,79 @@
+#anotacoes {
+    margin-top: 4px;
+    font-size: 16px;
+    padding: 8px;
+    width: 90%;
+    list-style-type: none;
+}
+
+#anotacoes li {
+    cursor: pointer;
+}
+
+.wrapperInput {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperInput input {
+    flex: 1;
+    margin: 0px 4px;
+}
+
+.wrapperInput #clearAll {
+    flex: 0;
+}
+
+.wrapperInput #clearAll i {
+    font-size: 24px;
+}
+
+.wrapperInput #clearAll:hover i {
+    transition: .5s;
+    color: var(--red);
+}
+
+input[type="text"] {
+	background: var(--soft-dark);
+	color: var(--white);
+  	width: 90%;
+    height: 24px;
+  	font-size: 16px;
+  	border: 1px solid var(--dark-border);
+  	outline: none;
+  	border-radius: 5px;
+    padding: 4px;
+}
+
+#context-menu {
+    position: fixed;
+    z-index: 10000;
+    width: 150px;
+    background: var(--back-color);
+    border: var(--soft-dark) 2px solid;
+    border-radius: 5px;
+    transform: scale(0);
+    transform-origin: top left;
+}
+
+#context-menu.visible {
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+#context-menu .item {
+    padding: 8px 10px;
+    font-size: 15px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+#context-menu .item:hover {
+    background: var(--soft-dark);
+}
+
+#context-menu .hover-red:hover {
+    color: var(--red);
+}

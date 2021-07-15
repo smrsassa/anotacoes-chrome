@@ -1,0 +1,21 @@
+#tutorial {
+    padding-left: 10px;
+}
+
+#tutorial h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#tutorial ul {
+    font-size: 14px;
+}
+
+#links {
+    margin-top: 16px;
+}
+
+#links > * {
+    color: var(--white);
+    font-size: 24px;
+}

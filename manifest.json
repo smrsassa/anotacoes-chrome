@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "name": "smr - ToDo",
+    "description": "Extensão ToDo - SMR",
+    "author": "Samuel Mayer Rufino",
+    "browser_action": {
+   	    "default_title": "smrToDo",
+   	    "default_popup": "./view/index.html",
+   	    "default_icon": "./img/icon.png"
+    },
+    "permissions": [
+        "storage"
+    ]
+}

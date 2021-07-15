@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --back-color: #23272a;
+    --dark: #2c2f33;
+    --soft-dark: #45484d;
+    --dark-border: #57595e;
+    --blue: #7289da;
+    --blue-L: #333955;
+    --gray: #99aab5;
+    --white: #ececec;
+    --red: #fa3c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--back-color);
+    border: var(--soft-dark) 2px solid;
+    width: 300px;
+    min-height: 180px;
+    padding: 8px 8px 2px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    border: var(--blue) 0.125rem solid;
+    border-radius: 100vh;
+    width: 100%;
+}
+
+nav ul li {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100vh;
+    padding: 4px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+nav ul li:hover{
+    background-color: var(--blue-L);
+}
+
+nav ul li.ativo{
+    background-color: var(--blue);
+}
+
+nav ul li a{
+    text-align: center;
+    color: var(--white);
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    color: var(--white);
+    font-size: 22px;
+}
+
+section#conteudo {
+    margin: 8px 0px 16px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    opacity: 30%;
+}
+
+footer hr {
+    opacity: 30%;
+    margin: 6px 4px 2px 4px;
+}
