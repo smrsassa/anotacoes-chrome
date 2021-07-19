@@ -1,4 +1,5 @@
 const btnIndex = $("#btnIndex")
+const btnConfig = $("#btnConfig")
 const btnAbout = $("#btnAbout")
 
 function switchItemAtivo( sucessor ) {
@@ -27,6 +28,11 @@ var itemAtivo = btnIndex
 btnIndex.on("click", () => {
     switchItemAtivo(btnIndex)
     ajaxLoadPartial("anotacao")
+})
+
+btnConfig.on("click", () => {
+    switchItemAtivo(btnConfig)
+    ajaxLoadPartial("config")
 })
 
 btnAbout.on("click", () => {
