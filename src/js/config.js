@@ -15,12 +15,13 @@ function reloadVarsConfig() {
         chrome.storage.local.set({ "anotacoesConfig": config }, () => {})
     }
 
-    function carregarAnotacoes() {
+    function carregarConfigs() {
         chrome.storage.local.get("anotacoesConfig", (items) => {
             let source = items.anotacoesConfig
-            Object.assign(config, source)
+            config = Object.assign(config, source)
             storageConfig()
             inputState()
+            applyConfigs()
         })
     }
 
@@ -62,5 +63,17 @@ function reloadVarsConfig() {
         })
     })
 
-    carregarAnotacoes()
+    function applyClearAll() {
+        const elemClearAll = $("#clearAll")
+        elemClearAll.hide()
+    }
+
+    function applyConfigs() {
+        if ( config.Tema === "" ) console.log("Tema")
+        if ( config.ClearAll === "" ) applyClearAll()
+        if ( config.Ask === "checked" ) console.log("Ask")
+        if ( config.Credt === "" ) console.log("Credt")
+    }
+
+    carregarConfigs()
 }
