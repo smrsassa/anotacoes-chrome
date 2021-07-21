@@ -74,8 +74,6 @@ function reloadVarsAnotacoes() {
         carregarAnotacoes(true)
 
         elemInputAnotacao.val("")
-
-        if ( anotacao === "cls" ) clearAllData()
     })
 
     elemClearAll.on("dblclick", () => {
