@@ -68,11 +68,16 @@ function reloadVarsConfig() {
         elemClearAll.hide()
     }
 
+    function applyCredt() {
+        const elemCredt = $("footer")
+        elemCredt.hide()
+    }
+
     function applyConfigs() {
         if ( config.Tema === "" ) console.log("Tema")
         if ( config.ClearAll === "" ) applyClearAll()
         if ( config.Ask === "checked" ) console.log("Ask")
-        if ( config.Credt === "" ) console.log("Credt")
+        if ( config.Credt === "" ) applyCredt()
     }
 
     carregarConfigs()
