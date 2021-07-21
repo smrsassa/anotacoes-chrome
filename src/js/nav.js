@@ -16,7 +16,8 @@ function ajaxLoadPartial( partial ) {
         url: 'partials/'+ partial +'.html',
         success: function (data) {
             $('#conteudo').html(data)
-            loadScriptAnotacoes()
+            reloadVarsAnotacoes()
+            reloadVarsConfig()
         }
     });
 }

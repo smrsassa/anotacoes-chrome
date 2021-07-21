@@ -1,9 +1,10 @@
-function loadScriptAnotacoes() {
+function reloadVarsAnotacoes() {
     const elemAnotacoes = $("#anotacoes")
     const elemInputAnotacao = $("#addAnotacao")
     const elemClearAll = $("#clearAll")
     const contextMenu = $("#context-menu")
     const scope = $("body")
+
     var elemSelected = null
 
     let data = { "notas": [] }
@@ -158,5 +159,4 @@ function loadScriptAnotacoes() {
     })
 
     carregarAnotacoes()
-
 }
