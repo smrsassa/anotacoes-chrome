@@ -1,13 +1,11 @@
 function reloadVarsConfig() {
     const elemSwitchTema = $("#switchTema")
     const elemSwitchClearAll = $("#switchClearAll")
-    const elemSwitchAsk = $("#switchAsk")
     const elemSwitchCredt = $("#switchCredt")
 
     var config = {
         Tema: "checked",
         ClearAll: "checked",
-        Ask: "",
         Credt: "checked"
     }
 
@@ -28,7 +26,6 @@ function reloadVarsConfig() {
     function inputState() {
         elemSwitchTema.prop("checked", config.Tema === "checked")
         elemSwitchClearAll.prop("checked", config.ClearAll === "checked")
-        elemSwitchAsk.prop("checked", config.Ask === "checked")
         elemSwitchCredt.prop("checked", config.Credt === "checked")
     }
 
@@ -40,6 +37,7 @@ function reloadVarsConfig() {
         Object.assign(config, params)
         storageConfig()
         inputState()
+        applyConfigs()
     }
 
     elemSwitchTema.on("change", () => {
@@ -52,32 +50,49 @@ function reloadVarsConfig() {
             ClearAll: switchChecked(config.ClearAll)
         })
     })
-    elemSwitchAsk.on("change", () => {
-        saveSwitch({
-            Ask: switchChecked(config.Ask)
-        })
-    })
     elemSwitchCredt.on("change", () => {
         saveSwitch({
             Credt: switchChecked(config.Credt)
         })
     })
 
-    function applyClearAll() {
-        const elemClearAll = $("#clearAll")
-        elemClearAll.hide()
+    function applyTema( whiteTheme = false ) {
+        let cores = {
+            '--back-color': whiteTheme ? '#23272a' : '#23272a',
+            '--dark': whiteTheme ? '#2c2f33' : '#2c2f33',
+            '--soft-dark': whiteTheme ? '#45484d' : '#45484d',
+            '--dark-border': whiteTheme ? '#57595e' : '#57595e',
+            '--blue': whiteTheme ? '#7289da' : '#7289da',
+            '--blue-L': whiteTheme ? '#333955' : '#333955',
+            '--gray': whiteTheme ? '#99aab5' : '#99aab5',
+            '--white': whiteTheme ? '#ececec' : '#ececec',
+            '--red': whiteTheme ? '#fa3c3c' : '#fa3c3c'
+        }
+
+        for(var index in cores) {
+            document.documentElement.style.setProperty(index, cores[index]);
+        }
     }
 
-    function applyCredt() {
+    function applyClearAll( hide = true ) {
+        const elemClearAll = $("#clearAll")
+        if ( hide ) return elemClearAll.hide()
+        return elemClearAll.show()
+    }
+
+    function applyCredt( hide = true ) {
         const elemCredt = $("footer")
-        elemCredt.hide()
+        if ( hide ) return elemCredt.hide()
+        return elemCredt.show()
     }
 
     function applyConfigs() {
-        if ( config.Tema === "" ) console.log("Tema")
+        if ( config.Tema === "" ) applyTema(true)
+        else applyTema()
         if ( config.ClearAll === "" ) applyClearAll()
-        if ( config.Ask === "checked" ) console.log("Ask")
+        else applyClearAll(false)
         if ( config.Credt === "" ) applyCredt()
+        else applyCredt(false)
     }
 
     carregarConfigs()
