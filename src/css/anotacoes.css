@@ -52,7 +52,7 @@ input[type="text"] {
     z-index: 10000;
     width: 150px;
     background: var(--back-color);
-    border: var(--soft-dark) 2px solid;
+    border: var(--dark-border) 2px solid;
     border-radius: 5px;
     transform: scale(0);
     transform-origin: top left;

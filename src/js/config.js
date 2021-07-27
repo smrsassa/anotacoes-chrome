@@ -58,14 +58,14 @@ function reloadVarsConfig() {
 
     function applyTema( whiteTheme = false ) {
         let cores = {
-            '--back-color': whiteTheme ? '#23272a' : '#23272a',
+            '--back-color': whiteTheme ? '#ececec' : '#23272a',
             '--dark': whiteTheme ? '#2c2f33' : '#2c2f33',
-            '--soft-dark': whiteTheme ? '#45484d' : '#45484d',
-            '--dark-border': whiteTheme ? '#57595e' : '#57595e',
+            '--soft-dark': whiteTheme ? '#ebebf2' : '#45484d',
+            '--dark-border': whiteTheme ? '#99aab5' : '#57595e',
             '--blue': whiteTheme ? '#7289da' : '#7289da',
             '--blue-L': whiteTheme ? '#333955' : '#333955',
             '--gray': whiteTheme ? '#99aab5' : '#99aab5',
-            '--white': whiteTheme ? '#ececec' : '#ececec',
+            '--white': whiteTheme ? '#23272a' : '#ececec',
             '--red': whiteTheme ? '#fa3c3c' : '#fa3c3c'
         }
 

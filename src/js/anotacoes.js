@@ -96,13 +96,11 @@ function reloadVarsAnotacoes() {
         let normalizedX = mouseX
         let normalizedY = mouseY
 
-        if (outOfBoundsOnX) {
+        if (outOfBoundsOnX)
             normalizedX = scopeOffsetX + scope.clientWidth - contextMenu.clientWidth
-        }
 
-        if (outOfBoundsOnY) {
+        if (outOfBoundsOnY)
             normalizedY = scopeOffsetY + scope.clientHeight - contextMenu.clientHeight
-        }
 
         return { normalizedX, normalizedY }
     }
